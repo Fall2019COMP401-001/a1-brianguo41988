@@ -25,30 +25,52 @@ public class A1Jedi {
 				String[] customerfirstname = new String[customernumber];
 				String[] customerlastname = new String [customernumber];
 				int cquan = 0;
-
+				
 				// scans through each individual customer, recording their quantity of specific item as well as name
+//				boolean newCustomer = true;
+				
 				for (int i = 0; i < customernumber; i++) {
+					boolean[] hello = new boolean[quan];
+					for (int y = 0; y < hello.length; y++) {
+						hello[y] = false;
+					}
+					
 					customerfirstname[i] = scan.next();
 					customerlastname[i] = scan.next();
 					cquan = scan.nextInt();
 					int[] itemquan = new int[cquan];
 					String[] customeritemname = new String[cquan];
-					
+//					boolean firstroundIsover = true;
 					// assigning the total price per customer (each element) 
 					for (int c = 0; c < cquan; c++) {
+//						String current = customerfirstname[i];
 						itemquan[c] = scan.nextInt();
 						customeritemname[c] = scan.next();
+//						int samecustomer = i;
+//						boolean firstroundIsover = true;
+//						boolean hit = false;
 						for (int b = 0; b < quan; b++) {
-
-							
 							if (itemname[b].equals(customeritemname[c])) {
 								amt[b] = amt[b] + (itemquan[c]);
-								numbercustbought[b] += 1;
-							
-									
+								
+								if (hello[b] == false) {
+									numbercustbought[b] += 1;
+									hello[b] = true;
 								}
-									
+							}
+							
+//								String compare = customeritemname[0];
+//								for (int n=0; n < cquan; n++) {
+//									if (compare.equals(customeritemname[n+1])) {
+//										numbercustbought[b] = numbercustbought[b] - 1;
+//								}
+//							}
 						}
+								
+//						}
+//					for (int n = 0; n < cquan; n++) {
+//						
+//					}
 					}
 					
 				}
@@ -60,5 +82,5 @@ public class A1Jedi {
 						}
 				}
 	}
-}
+				}
 
