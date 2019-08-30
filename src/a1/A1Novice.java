@@ -9,36 +9,28 @@ package a1;
 				Scanner scan = new Scanner(System.in);
 
 				// Your code follows here.
-				int loopnumber = scan.nextInt();
-				for (int i=0; i <= loopnumber; i++) {
-					System.out.println(scan.next());
-					System.out.println(scan.next() + ":");
-					loopnumber = scan.nextInt();
-					double totalamount = 0;
-					for (int j=0; j <= loopnumber; j++) {
-						int amount = scan.nextInt();
-						double price = scan.nextDouble();
-						double[] prices = new double[loopnumber]; //find how big the array is
-						
-						for (int k=0; k<=loopnumber; k++ ) {
-							prices[k] = amount * price;
-							if (k<loopnumber - 1) { 
-							amount = scan.nextInt();
-							price = scan.nextDouble();
-							}else{
-								k = 100;
-							}
-							
-							for (int l=0; l<prices.length; l++) {
-								totalamount = totalamount + prices[l];
-								System.out.println(totalamount);
-								
-							}
-						}
-					
+				int numberOfcustomers = scan.nextInt(); // sets the variable for the amount of loops, each customer = one loop
+				for (int i=0; i < numberOfcustomers; i++) {// prints out the customer name
+					String firstname = scan.next();
+					String lastname = scan.next();
+					char z = firstname.charAt(0);
+					int totalAmountitems = scan.nextInt(); // sets a variable for total amount of items bought per customer
+					double totalamount = 0; // sets a variable for the total amount
+					for (int j=0; j < totalAmountitems; j++) { // a for loop for the number for the # of total items bought, quantity and price		
+						int quantity = scan.nextInt(); // sets a variable for the quantity of a specific item
+						String name = scan.next();
+						double price = scan.nextDouble(); //sets a variable to store the price of each item
+						totalamount += price * quantity;
 					}
-					scan.close();
-				}
-				
+					System.out.println(z + "." + " " + lastname + ": " + String.format("%.2f", totalamount));
+//								
+							}
+				scan.close();
 			}
+					
+				
+			
+				
 		}
+			
+		
