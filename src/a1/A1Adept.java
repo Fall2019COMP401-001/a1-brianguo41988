@@ -68,7 +68,7 @@ public class A1Adept {
 		
 	
 		}
-		System.out.println("Biggest:" + customerfirstname[a] + " " + customerlastname[a] + " (" + String.format("%.2f", biggestnumber) + ")");
+		System.out.println("Biggest: " + customerfirstname[a] + " " + customerlastname[a] + " (" + String.format("%.2f", biggestnumber) + ")");
 //		System.out.println("Biggest:" + customerfirstname[i] + customerlastname[i] + "(" + String.format("%.2f", biggestnumber) + ")");
 		// finding the smallest number and printing out customer name and total
 		double smallestnumber = totalprice[0];
@@ -82,7 +82,7 @@ public class A1Adept {
 			
 			
 		}
-		System.out.println("Smallest:" + customerfirstname[b] + " " + customerlastname[b] + " (" + String.format("%.2f", smallestnumber) + ")");
+		System.out.println("Smallest: " + customerfirstname[b] + " " + customerlastname[b] + " (" + String.format("%.2f", smallestnumber) + ")");
 		// finding the average spend
 //		System.out.println("Smallest:" + customerfirstname[i] + customerlastname[i] + "(" + String.format("%.2f", smallestnumber) + ")");
 		double average = 0.0;
